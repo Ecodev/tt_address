@@ -335,8 +335,6 @@ return array(
 			image, description,
 			--div--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_tab.contact,
 				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.address;address_usa,
-				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.building;building,
-				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.organization;organization,
 				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.contact;contact,
 				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.social;social,
 			--div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category, categories
@@ -344,10 +342,9 @@ return array(
 	),
 	'palettes' => array(
 		'name' => array(
-			'showitem' => 'name, --linebreak--,
-							gender, title, --linebreak--,
-							first_name, middle_name, --linebreak--,
-							last_name',
+			'showitem' => 'gender, title, --linebreak--,
+							first_name, last_name, --linebreak--,
+							name',
 			'canNotCollapse' => 1
 		),
 
@@ -377,7 +374,7 @@ return array(
 
 		'contact' => array(
 			'showitem' => 'email, --linebreak--,
-							phone, fax, --linebreak--,
+							phone, --linebreak--,
 							mobile, --linebreak--,
 							www',
 			'canNotCollapse' => 1

@@ -1,7 +1,15 @@
 <?php
 $settings = \TYPO3\TtAddress\Utility\SettingsUtility::getSettings();
 
-return [
+
+$configuration = [];
+if (isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address'])) {
+    $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address']);
+}
+
+$isCategorizable = empty($configuration['isCategorizable']) ? (bool)$configuration['isCategorizable'] : false;
+
+$tca = [
     'ctrl' => [
         'label' => 'name',
         'label_alt' => 'email',
@@ -14,7 +22,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden'
         ],
-        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('tt_address') . 'ext_icon.gif',
+        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('tt_address') . 'ext_icon.png',
         'searchFields' => 'name, first_name, middle_name, last_name, email',
         'dividers2tabs' => 1,
     ],
@@ -331,14 +339,14 @@ return [
     'types' => [
         '0' => ['showitem' =>
             'hidden,
-			--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.name;name,
-			image, description,
-			--div--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_tab.contact,
-				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.address;address_usa,
-				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.contact;contact,
-				--palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.social;social,
-			--div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category, categories
-			']
+            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.name;name,
+            image, description,
+            --div--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_tab.contact,
+            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.address;address_usa,
+            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.contact;contact,
+            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.social;social,
+            '
+        ]
     ],
     'palettes' => [
         'name' => [
@@ -421,3 +429,10 @@ return [
         ]
     ]
 ];
+
+
+if ($isCategorizable) {
+    $tca['types'][0]['showitem'] .= '--div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category, categories';
+}
+
+return $tca;

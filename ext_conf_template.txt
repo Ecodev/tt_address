@@ -9,3 +9,6 @@ readOnlyNameField = 1
 
 # cat=basic//; type=string; label= Default page id: When creating a new record in the Vidi BE module, set a default pid.
 default_pid = 1
+
+# cat=basic//; type=bool; label= Is categorizable: If so, the category tree will be displayed when editing an address.
+isCategorizable = 0

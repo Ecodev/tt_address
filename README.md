@@ -2,10 +2,10 @@ Addresses
 =========
 
 This is a tt_address fork which adds:
-  
-* Vidi BE module
-* Remove the `pi1` which is of no use for us 
 
+* BE module to easily manage your addresses based on Vidi. Vidi is only suggested in the dependencies. Consider installing it if you want to take advantage of the BE module.
+* Remove the `pi1` which is of no use for us.
+* Configure whether addresses are categorizable.
 
 How to load this fork
 =====================

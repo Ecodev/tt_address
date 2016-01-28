@@ -12,6 +12,7 @@ CREATE TABLE tt_address (
 	middle_name tinytext NOT NULL,
 	last_name tinytext NOT NULL,
 	birthday int(11) DEFAULT '0' NOT NULL,
+	default_language tinytext NOT NULL,
 	title varchar(255) DEFAULT '' NOT NULL,
 	email varchar(255) DEFAULT '' NOT NULL,
 	phone varchar(30) DEFAULT '' NOT NULL,

@@ -26,11 +26,8 @@ $tca = [
         'searchFields' => 'name, first_name, middle_name, last_name, email',
         'dividers2tabs' => 1,
     ],
-    'feInterface' => [
-        'fe_admin_fieldList' => 'pid,hidden,gender,first_name,middle_name,last_name,title,address,building,room,birthday,phone,fax,mobile,www,email,city,zip,company,region,country,image,description'
-    ],
     'interface' => [
-        'showRecordFieldList' => 'first_name,middle_name,last_name,address,building,room,city,zip,region,country,phone,fax,email,www,title,company,image'
+        'showRecordFieldList' => 'first_name, middle_name, last_name, address, building, room, city, zip, region, country, phone, fax, email, www, title, company, image'
     ],
     'columns' => [
         'hidden' => [
@@ -109,6 +106,15 @@ $tca = [
                 'eval' => 'date',
                 'size' => '8',
                 'max' => '20'
+            ]
+        ],
+        'default_language' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.default_language',
+            'config' => [
+                'type' => 'input',
+                'eval' => 'trim',
+                'size' => '20',
             ]
         ],
         'address' => [
@@ -340,7 +346,7 @@ $tca = [
         '0' => ['showitem' =>
             'hidden,
             --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.name;name,
-            image, description,
+            default_language, image, description,
             --div--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_tab.contact,
             --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.address;address_usa,
             --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.contact;contact,
@@ -400,6 +406,7 @@ $tca = [
         'facets' => [
             'uid',
             'first_name',
+            'default_language',
             'last_name',
             'email',
         ],

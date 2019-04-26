@@ -15,7 +15,7 @@ $tca = [
         'label_alt' => 'email',
         'default_sortby' => 'ORDER BY last_name, first_name, middle_name',
         'tstamp' => 'tstamp',
-        'prependAtCopy' => 'LLL:EXT:lang/locallang_general.xml:LGL.prependAtCopy',
+        'prependAtCopy' => 'PrependAtCopy',
         'delete' => 'deleted',
         'title' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address',
         'thumbnail' => 'image',
@@ -34,7 +34,7 @@ $tca = [
     'columns' => [
         'hidden' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+            'label' => 'Hidden',
             'config' => [
                 'type' => 'check'
             ]
@@ -52,7 +52,7 @@ $tca = [
         ],
         'title' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.title_person',
+            'label' => 'Title_person',
             'config' => [
                 'type' => 'input',
                 'size' => '8',
@@ -61,7 +61,7 @@ $tca = [
             ]
         ],
         'name' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.name',
+            'label' => 'Name',
             'config' => [
                 'type' => 'input',
                 'readOnly' => $settings->isReadOnlyNameField(),
@@ -120,7 +120,7 @@ $tca = [
             ]
         ],
         'address' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.address',
+            'label' => 'Address',
             'config' => [
                 'type' => 'text',
                 'cols' => '20',
@@ -146,7 +146,7 @@ $tca = [
             ]
         ],
         'phone' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.phone',
+            'label' => 'Phone',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -156,7 +156,7 @@ $tca = [
         ],
         'fax' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.fax',
+            'label' => 'Fax',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -176,7 +176,7 @@ $tca = [
         ],
         'www' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.www',
+            'label' => 'Www',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -204,7 +204,7 @@ $tca = [
             ]
         ],
         'email' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.email',
+            'label' => 'Email',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -277,7 +277,7 @@ $tca = [
             ]
         ],
         'city' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.city',
+            'label' => 'City',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -286,7 +286,7 @@ $tca = [
             ]
         ],
         'zip' => [
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.zip',
+            'label' => 'Zip',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -306,7 +306,7 @@ $tca = [
         ],
         'country' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.country',
+            'label' => 'Country',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -316,7 +316,7 @@ $tca = [
         ],
         'image' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.image',
+            'label' => 'Image',
             'config' => [
                 'type' => 'group',
                 'internal_type' => 'file',
@@ -331,7 +331,7 @@ $tca = [
         ],
         'description' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.description',
+            'label' => 'Description',
             'config' => [
                 'type' => 'text',
                 'rows' => 5,

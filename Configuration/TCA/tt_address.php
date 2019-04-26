@@ -22,7 +22,9 @@ $tca = [
         'enablecolumns' => [
             'disabled' => 'hidden'
         ],
-        'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('tt_address') . 'ext_icon.png',
+        'typeicon_classes' => [
+            'default' => 'extensions-tt_address-address',
+        ],
         'searchFields' => 'name, first_name, middle_name, last_name, email',
         'dividers2tabs' => 1,
     ],

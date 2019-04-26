@@ -51,9 +51,9 @@ class BackwardsCompatibilityNameFormat {
 
 				$combinedName = trim(sprintf(
 					$format,
-					$newRecord['first_name'],
+					$newRecord['last_name'],
 					$newRecord['middle_name'],
-					$newRecord['last_name']
+					$newRecord['first_name']
 				));
 
 				if(!empty($combinedName)) {

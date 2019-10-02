@@ -15,7 +15,6 @@ To use the forked package in Composer, make sure to declare the git repository b
 ```
 
     "repositories": [
-        
         {
           "type": "git",
           "url": "https://github.com/Ecodev/tt_address.git"
@@ -26,7 +25,7 @@ To use the forked package in Composer, make sure to declare the git repository b
         }
     ],
     "require": {
-        "friendsoftypo3/tt-address": "dev-master"
+        "ecodev/tt-address": "dev-master"
     },
 ```
 

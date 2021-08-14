@@ -24,5 +24,10 @@
   "replace": {
     "tt_address": "self.version",
     "typo3-ter/tt-address": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "tt_address"
+    }
   }
 }

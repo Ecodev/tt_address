@@ -13,11 +13,11 @@ $tca = [
     'ctrl' => [
         'label' => 'name',
         'label_alt' => 'email',
-        'default_sortby' => 'ORDER BY last_name, first_name, middle_name',
+        'default_sortby' => 'ORDER BY last_name, first_name',
         'tstamp' => 'tstamp',
         'prependAtCopy' => 'PrependAtCopy',
         'delete' => 'deleted',
-        'title' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address',
+        'title' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address',
         'thumbnail' => 'image',
         'enablecolumns' => [
             'disabled' => 'hidden'
@@ -25,11 +25,11 @@ $tca = [
         'typeicon_classes' => [
             'default' => 'extensions-tt_address-address',
         ],
-        'searchFields' => 'name, first_name, middle_name, last_name, email',
+        'searchFields' => 'name, first_name, last_name, email',
         'dividers2tabs' => 1,
     ],
     'interface' => [
-        'showRecordFieldList' => 'first_name, middle_name, last_name, address, building, room, city, zip, region, country, phone, fax, email, www, title, company, image'
+        'showRecordFieldList' => 'first_name, last_name, address, building, room, city, zip, region, country, phone, fax, email, www, title, company, image'
     ],
     'columns' => [
         'hidden' => [
@@ -40,13 +40,13 @@ $tca = [
             ]
         ],
         'gender' => [
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.gender',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender',
             'config' => [
                 'type' => 'radio',
                 'default' => 'm',
                 'items' => [
-                    ['LLL:EXT:tt_address/locallang_tca.xml:tt_address.gender.m', 'm'],
-                    ['LLL:EXT:tt_address/locallang_tca.xml:tt_address.gender.f', 'f']
+                    ['LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.m', 'm'],
+                    ['LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.f', 'f']
                 ]
             ]
         ],
@@ -72,17 +72,7 @@ $tca = [
         ],
         'first_name' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.first_name',
-            'config' => [
-                'type' => 'input',
-                'size' => '20',
-                'eval' => 'trim',
-                'max' => '255'
-            ]
-        ],
-        'middle_name' => [
-            'exclude' => 0,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.middle_name',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.first_name',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -92,7 +82,7 @@ $tca = [
         ],
         'last_name' => [
             'exclude' => 0,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.last_name',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.last_name',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -102,21 +92,12 @@ $tca = [
         ],
         'birthday' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.birthday',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.birthday',
             'config' => [
                 'type' => 'input',
                 'eval' => 'date',
                 'size' => '8',
                 'max' => '20'
-            ]
-        ],
-        'default_language' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.default_language',
-            'config' => [
-                'type' => 'input',
-                'eval' => 'trim',
-                'size' => '20',
             ]
         ],
         'address' => [
@@ -128,7 +109,7 @@ $tca = [
             ]
         ],
         'building' => [
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.building',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.building',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -137,7 +118,7 @@ $tca = [
             ]
         ],
         'room' => [
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.room',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.room',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -166,7 +147,7 @@ $tca = [
         ],
         'mobile' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.mobile',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.mobile',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -214,7 +195,7 @@ $tca = [
         ],
         'skype' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.skype',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.skype',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -225,7 +206,7 @@ $tca = [
         ],
         'twitter' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.twitter',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.twitter',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -236,7 +217,7 @@ $tca = [
         ],
         'facebook' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.facebook',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.facebook',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -247,7 +228,7 @@ $tca = [
         ],
         'linkedin' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.linkedin',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.linkedin',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -258,7 +239,7 @@ $tca = [
         ],
         'company' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.organization',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.organization',
             'config' => [
                 'type' => 'input',
                 'eval' => 'trim',
@@ -268,7 +249,7 @@ $tca = [
         ],
         'position' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.position',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.position',
             'config' => [
                 'type' => 'input',
                 'size' => '20',
@@ -296,7 +277,7 @@ $tca = [
         ],
         'region' => [
             'exclude' => 1,
-            'label' => 'LLL:EXT:tt_address/locallang_tca.xml:tt_address.region',
+            'label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.region',
             'config' => [
                 'type' => 'input',
                 'size' => '10',
@@ -347,12 +328,11 @@ $tca = [
     'types' => [
         '0' => ['showitem' =>
             'hidden,
-            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.name;name,
-            default_language, image, description,
-            --div--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_tab.contact,
-            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.address;address_usa,
-            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.contact;contact,
-            --palette--;LLL:EXT:tt_address/locallang_tca.xml:tt_address_palette.social;social,
+            --palette--;LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address_palette.name;name, image, description,
+            --div--;LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address_tab.contact,
+            --palette--;LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address_palette.address;address_usa,
+            --palette--;LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address_palette.contact;contact,
+            --palette--;LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address_palette.social;social,
             '
         ]
     ],
@@ -408,7 +388,6 @@ $tca = [
         'facets' => [
             'uid',
             'first_name',
-            'default_language',
             'last_name',
             'email',
         ],

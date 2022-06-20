@@ -1,29 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="" product-name="local lang module">
-		<header/>
-		<body>
-			<!-- labels for BE module integration with TYPO3 -->
-			<trans-unit id="mlang_labels_tablabel">
-				<source>Addresses Management</source>
-			</trans-unit>
-			<trans-unit id="mlang_tabs_tab" xml:space="preserve">
-				<source>Addresses</source>
-			</trans-unit>
-			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
-				<source>Addresses Management</source>
-			</trans-unit>
-
-			<!-- labels for the BE module itself -->
-			<trans-unit id="uid" xml:space="preserve">
-				<source>Uid</source>
-			</trans-unit>
-			<trans-unit id="name" xml:space="preserve">
-				<source>name</source>
-			</trans-unit>
-			<trans-unit id="email" xml:space="preserve">
-            	<source>email</source>
+    <file source-language="en" datatype="plaintext" original="messages" date="" product-name="local lang module">
+        <header />
+        <body>
+        <!-- labels for BE module integration with TYPO3 -->
+            <trans-unit id="mlang_labels_tablabel">
+                <source>Addresses Management</source>
             </trans-unit>
-		</body>
-	</file>
+            <trans-unit id="mlang_tabs_tab" xml:space="preserve">
+                <source>Addresses</source>
+            </trans-unit>
+            <trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
+                <source>Addresses Management</source>
+            </trans-unit>
+
+        <!-- labels for the BE module itself -->
+            <trans-unit id="uid" xml:space="preserve">
+                <source>Uid</source>
+            </trans-unit>
+            <trans-unit id="name" xml:space="preserve">
+                <source>name</source>
+            </trans-unit>
+            <trans-unit id="email" xml:space="preserve">
+                <source>email</source>
+            </trans-unit>
+
+            <trans-unit id="tt_address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tt_address.mobile">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="tt_address.gender">
+                <source>Gender</source>
+            </trans-unit>
+            <trans-unit id="tt_address.gender.m">
+                <source>Male (Mr)</source>
+            </trans-unit>
+            <trans-unit id="tt_address.gender.f">
+                <source>Female (Mrs)</source>
+            </trans-unit>
+            <trans-unit id="tt_address.first_name">
+                <source>First Name</source>
+            </trans-unit>
+            <trans-unit id="tt_address.last_name">
+                <source>Last Name</source>
+            </trans-unit>
+            <trans-unit id="tt_address.birthday">
+                <source>Birthday</source>
+            </trans-unit>
+            <trans-unit id="tt_address.building">
+                <source>Building</source>
+            </trans-unit>
+            <trans-unit id="tt_address.room">
+                <source>Room</source>
+            </trans-unit>
+            <trans-unit id="tt_address.organization">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="tt_address.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="tt_address.region">
+                <source>Region/State</source>
+            </trans-unit>
+            <trans-unit id="tt_address.skype">
+                <source>Skype</source>
+            </trans-unit>
+            <trans-unit id="tt_address.twitter">
+                <source>twitter</source>
+            </trans-unit>
+            <trans-unit id="tt_address.facebook">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tt_address.linkedin">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tt_address_tab.contact">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.organization">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.building">
+                <source>Building</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.contact">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tt_address_palette.social">
+                <source>Social Networks</source>
+            </trans-unit>
+            <trans-unit id="pi_tt_address">
+                <source>Addresses</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

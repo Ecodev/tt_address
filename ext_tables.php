@@ -1,17 +1,18 @@
 <?php
+
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tt_address');
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToInsertRecords('tt_address');
+    ExtensionManagementUtility::allowTableOnStandardPages('tt_address');
+    ExtensionManagementUtility::addToInsertRecords('tt_address');
 
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('vidi')) {
+    if (ExtensionManagementUtility::isLoaded('vidi')) {
 
         /** @var \Fab\Vidi\Module\ModuleLoader $moduleLoader */
         $moduleLoader = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Fab\Vidi\Module\ModuleLoader::class, 'tt_address');
-
-        $objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\ObjectManager::class);
 
         $configuration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
@@ -28,6 +29,7 @@ call_user_func(function () {
     $icons = [
         'address' => 'EXT:tt_address/ext_icon.png',
     ];
+
     /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     foreach ($icons as $key => $icon) {

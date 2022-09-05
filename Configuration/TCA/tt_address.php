@@ -1,5 +1,4 @@
 <?php
-$settings = \TYPO3\TtAddress\Utility\SettingsUtility::getSettings();
 
 
 $configuration = [];
@@ -64,7 +63,6 @@ $tca = [
             'label' => 'Name',
             'config' => [
                 'type' => 'input',
-                'readOnly' => $settings->isReadOnlyNameField(),
                 'size' => '40',
                 'eval' => 'trim',
                 'max' => '255'

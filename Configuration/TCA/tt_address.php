@@ -320,7 +320,27 @@ $tca = [
         'categories' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:lang/locallang_tca.xlf:sys_category.categories',
-            'config' => \TYPO3\CMS\Core\Category\CategoryRegistry::getTcaFieldConfiguration('tt_address')
+            'config' => [
+                'type' => 'category',
+                'relationship' => 'oneToMany',
+                'foreign_table' => 'sys_category',
+                'foreign_table_where' => ' AND sys_category.sys_language_uid IN (-1,0)',
+                'MM' => 'sys_category_record_mm',
+                'MM_opposite_field' => 'items',
+                'MM_match_fields' => [
+                    'tablenames' => 'tt_address',
+                    'fieldname' => 'categories',
+                ],
+                'maxitems' => 9999,
+                'renderMode' => 'tree',
+                'treeConfig' => [
+                    'parentField' => 'parent',
+                    'appearance' => [
+                        'showHeader' => true,
+                        'expandAll' => true,
+                    ],
+                ],
+            ]
         ]
     ],
     'types' => [

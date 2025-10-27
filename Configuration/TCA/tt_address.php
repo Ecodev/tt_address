@@ -27,9 +27,6 @@ $tca = [
         'searchFields' => 'name, first_name, last_name, email',
         'dividers2tabs' => 1,
     ],
-    'interface' => [
-        'showRecordFieldList' => 'first_name, last_name, address, building, room, city, zip, region, country, phone, fax, email, www, title, company, image'
-    ],
     'columns' => [
         'hidden' => [
             'exclude' => 1,
@@ -44,8 +41,8 @@ $tca = [
                 'type' => 'radio',
                 'default' => 'm',
                 'items' => [
-                    ['LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.m', 'm'],
-                    ['LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.f', 'f']
+                    ['label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.m', 'value' => 'm'],
+                    ['label' => 'LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf:tt_address.gender.f', 'value' => 'f']
                 ]
             ]
         ],
@@ -298,7 +295,6 @@ $tca = [
             'label' => 'Image',
             'config' => [
                 'type' => 'group',
-                'internal_type' => 'file',
                 'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
                 'max_size' => '1000',
                 'uploadfolder' => 'uploads/pics',

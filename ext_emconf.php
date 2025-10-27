@@ -16,8 +16,6 @@ $EM_CONF[$_EXTKEY] = [
 			'vidi' => '0.0.0-0.0.0',
         ],
     ],
-	'suggests' => [
-    ],
     'autoload' =>
         [
             'classmap' => ['Classes']

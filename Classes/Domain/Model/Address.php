@@ -189,7 +189,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $gender
 	 * @return void
 	 */
-	public function setGender($gender) {
+	public function setGender($gender): void {
 		$this->gender = $gender;
 	}
 
@@ -208,7 +208,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $name
 	 * @return void
 	 */
-	public function setName($name) {
+	public function setName($name): void {
 		$this->name = $name;
 	}
 
@@ -227,7 +227,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $firstName
 	 * @return void
 	 */
-	public function setFirstName($firstName) {
+	public function setFirstName($firstName): void {
 		$this->firstName = $firstName;
 	}
 
@@ -246,7 +246,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $middleName
 	 * @return void
 	 */
-	public function setMiddleName($middleName) {
+	public function setMiddleName($middleName): void {
 		$this->middleName = $middleName;
 	}
 
@@ -265,7 +265,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $lastName
 	 * @return void
 	 */
-	public function setLastName($lastName) {
+	public function setLastName($lastName): void {
 		$this->lastName = $lastName;
 	}
 
@@ -284,7 +284,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \DateTime $birthday
 	 * @return void
 	 */
-	public function setBirthday($birthday) {
+	public function setBirthday($birthday): void {
 		$this->birthday = $birthday;
 	}
 
@@ -303,7 +303,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $title
 	 * @return void
 	 */
-	public function setTitle($title) {
+	public function setTitle($title): void {
 		$this->title = $title;
 	}
 
@@ -322,7 +322,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $address
 	 * @return void
 	 */
-	public function setAddress($address) {
+	public function setAddress($address): void {
 		$this->address = $address;
 	}
 
@@ -341,7 +341,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $building
 	 * @return void
 	 */
-	public function setBuilding($building) {
+	public function setBuilding($building): void {
 		$this->building = $building;
 	}
 
@@ -360,7 +360,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $room
 	 * @return void
 	 */
-	public function setRoom($room) {
+	public function setRoom($room): void {
 		$this->room = $room;
 	}
 
@@ -379,7 +379,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $phone
 	 * @return void
 	 */
-	public function setPhone($phone) {
+	public function setPhone($phone): void {
 		$this->phone = $phone;
 	}
 
@@ -398,7 +398,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $fax
 	 * @return void
 	 */
-	public function setFax($fax) {
+	public function setFax($fax): void {
 		$this->fax = $fax;
 	}
 
@@ -417,7 +417,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $mobile
 	 * @return void
 	 */
-	public function setMobile($mobile) {
+	public function setMobile($mobile): void {
 		$this->mobile = $mobile;
 	}
 
@@ -436,7 +436,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $www
 	 * @return void
 	 */
-	public function setWww($www) {
+	public function setWww($www): void {
 		$this->www = $www;
 	}
 
@@ -455,7 +455,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $skype
 	 * @return void
 	 */
-	public function setSkype($skype) {
+	public function setSkype($skype): void {
 		$this->skype = $skype;
 	}
 
@@ -474,7 +474,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $twitter
 	 * @return void
 	 */
-	public function setTwitter($twitter) {
+	public function setTwitter($twitter): void {
 		if (substr($twitter, 0, 1) !== '@') {
 			throw new \InvalidArgumentException('twitter name must start with @', 1357530444);
 		}
@@ -497,7 +497,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $facebook
 	 * @return void
 	 */
-	public function setFacebook($facebook) {
+	public function setFacebook($facebook): void {
 		if (substr($facebook, 0, 1) !== '/') {
 			throw new \InvalidArgumentException('Facebook name must start with /', 1357530471);
 		}
@@ -520,7 +520,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $linkedIn
 	 * @return void
 	 */
-	public function setLinkedIn($linkedIn) {
+	public function setLinkedIn($linkedIn): void {
 		$this->linkedIn = $linkedIn;
 	}
 
@@ -539,7 +539,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $email
 	 * @return void
 	 */
-	public function setEmail($email) {
+	public function setEmail($email): void {
 		$this->email = $email;
 	}
 
@@ -558,7 +558,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $company
 	 * @return void
 	 */
-	public function setCompany($company) {
+	public function setCompany($company): void {
 		$this->company = $company;
 	}
 
@@ -577,7 +577,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $position
 	 * @return void
 	 */
-	public function setPosition($position) {
+	public function setPosition($position): void {
 		$this->position = $position;
 	}
 
@@ -596,7 +596,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $city
 	 * @return void
 	 */
-	public function setCity($city) {
+	public function setCity($city): void {
 		$this->city = $city;
 	}
 
@@ -615,7 +615,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $zip
 	 * @return void
 	 */
-	public function setZip($zip) {
+	public function setZip($zip): void {
 		$this->zip = $zip;
 	}
 
@@ -634,7 +634,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $region
 	 * @return void
 	 */
-	public function setRegion($region) {
+	public function setRegion($region): void {
 		$this->region = $region;
 	}
 
@@ -653,7 +653,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $country
 	 * @return void
 	 */
-	public function setCountry($country) {
+	public function setCountry($country): void {
 		$this->country = $country;
 	}
 
@@ -672,7 +672,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $image
 	 * @return void
 	 */
-	public function setImage($image) {
+	public function setImage($image): void {
 		$this->image = $image;
 	}
 
@@ -691,7 +691,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param string $description
 	 * @return void
 	 */
-	public function setDescription($description) {
+	public function setDescription($description): void {
 		$this->description = $description;
 	}
 

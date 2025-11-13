@@ -6,7 +6,7 @@ if (isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address'])) {
     $configuration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['tt_address']);
 }
 
-$isCategorizable = empty($configuration['isCategorizable']) ? (bool)$configuration['isCategorizable'] : false;
+$isCategorizable = !empty($configuration['isCategorizable']);
 
 $tca = [
     'ctrl' => [

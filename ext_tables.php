@@ -8,22 +8,6 @@ call_user_func(function () {
 
     ExtensionManagementUtility::addToInsertRecords('tt_address');
 
-    if (ExtensionManagementUtility::isLoaded('vidi')) {
-
-        /** @var \Fab\Vidi\Module\ModuleLoader $moduleLoader */
-        $moduleLoader = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Fab\Vidi\Module\ModuleLoader::class, 'tt_address');
-
-        $configuration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-            \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-        )->get('tt_address');
-
-        /** @var \Fab\Vidi\Module\ModuleLoader $moduleLoader */
-        $moduleLoader->setIcon('EXT:tt_address/ext_icon.png')
-            ->setModuleLanguageFile('LLL:EXT:tt_address/Resources/Private/Language/tt_address.xlf')
-            ->setDefaultPid((int)$configuration['default_pid'])
-            ->register();
-    }
-
     // Add new sprite icon.
     $icons = [
         'address' => 'EXT:tt_address/ext_icon.png',

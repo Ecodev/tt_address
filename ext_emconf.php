@@ -12,9 +12,6 @@ $EM_CONF[$_EXTKEY] = [
         ],
 		'conflicts' => [
         ],
-		'suggests' => [
-			'vidi' => '0.0.0-0.0.0',
-        ],
     ],
     'autoload' =>
         [
